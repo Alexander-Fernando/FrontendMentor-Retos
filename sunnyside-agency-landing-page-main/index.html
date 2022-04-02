@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__nav container">
+        <img src="./images/logo.svg" alt="Logo del header" class="hero__logo" />
+
+        <nav class="hero__navegacion">
+          <ul class="hero__list">
+            <li class="hero__item">
+              <a class="hero__link" href="#"> About </a>
+            </li>
+            <li class="hero__item">
+              <a class="hero__link" href="#">Services</a>
+            </li>
+            <li class="hero__item">
+              <a class="hero__link" href="#">Projects</a>
+            </li>
+            <li class="hero__item">
+              <a class="hero__link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="hero__button">
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="ícono de cierre de menu"
+            class="hero__icon"
+          />
+        </a>
+      </div>
+
+      <div class="container hero__main">
+        <h1 class="hero__title">WE ARE CREATIVES</h1>
+
+        <a href="#footer" class="hero__arrow">
+          <img
+            src="./images/icon-arrow-down.svg"
+            alt="Icono para desaplazar hacia el contenido"
+            class="hero__img"
+          />
+        </a>
+      </div>
+
+      <!-- MENU DE NAVEGACIÓN - MOVILE  -->
+      <div class="menu container">
+        <nav class="menu__nav">
+          <ul class="menu__list">
+            <li class="menu__element">
+              <a href="#" class="menu__link">About</a>
+            </li>
+            <li class="menu__element">
+              <a href="#" class="menu__link">Services</a>
+            </li>
+
+            <li class="menu__element">
+              <a href="#" class="menu__link">Projects</a>
+            </li>
+
+            <li class="menu__element">
+              <a href="#" class="menu__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__item">
+        <img src="./images/mobile/image-transform.jpg" class="main__picture" />
+        <div class="main__texts container">
+          <h2 class="main__title">Transform your brand</h2>
+          <p class="main__paragraph">
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <a href="#" class="main__cta"> Learn more</a>
+        </div>
+      </div>
+
+      <div class="main__item main__item--reverse">
+        <img src="./images/mobile/image-stand-out.jpg" class="main__picture" />
+
+        <div class="main__texts container">
+          <h2 class="main__title">Stand out to the right audience</h2>
+          <p class="main__paragraph">
+            Using a collaborative formula of designers, researches,
+            videographers, and copywriters, we'll build and extend your brand in
+            digital places.
+          </p>
+          <a href="#" class="main__cta main__cta--pink"> Learn more</a>
+        </div>
+      </div>
+
+      <section class="cards__container">
+        <div class="card__item">
+          <div class="card__texts container">
+            <h3 class="card__title">Graphic design</h3>
+            <p class="paragraph">
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients
+              attention.
+            </p>
+          </div>
+        </div>
+        <div class="card__item">
+          <div class="card__texts container">
+            <h3 class="card__title">Photography</h3>
+            <p class="paragraph">
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonios container">
+        <h3 class="main__subtitle">CLIENT TESTIMONIALS</h3>
+
+        <div class="testimonios__container">
+          <div class="testimonios__client">
+            <img src="images/image-emily.jpg" alt="Primera persona" /
+            class="main__imgprofile">
+            <div class="main__testimonio">
+              <p class="paragraph">
+                We put our trust in Sunnyside and they delivered, makig sure our
+                needs were met and deadlines were always hit.
+              </p>
+              <h3 class="main__name">Emily R.</h3>
+              <p class="main__ocupation">Marketing Director</p>
+            </div>
+          </div>
+
+          <div class="testimonios__client">
+            <img
+              src="images/image-thomas.jpg"
+              alt="Segundo persona"
+              class="main__imgprofile"
+            />
+            <div class="main__testimonio">
+              <p class="paragraph">
+                Sunnyside's enthusiasm coupled with their keen interest in our
+                brand's success made it a satisfying and enjoyable experience.
+              </p>
+              <h3 class="main__name">Thomas S.</h3>
+              <div class="main__ocupation">Chief Operating Officer</div>
+            </div>
+          </div>
+
+          <div class="testimonios__client">
+            <img
+              src="images/image-jennie.jpg"
+              alt="tercera persona"
+              class="main__imgprofile"
+            />
+            <div class="main__testimonio">
+              <p class="paragraph">
+                Incredible end result! Our sales increased over 400% when we
+                worked with Sunnyside. Highly recommended!
+              </p>
+              <h3 class="main__name">Jennie F.</h3>
+              <div class="main__ocupation">Business Owner</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <img
+          src="images/mobile/image-gallery-cone.jpg"
+          class="gallery__picture"
+        />
+        <img
+          src="images/mobile/image-gallery-milkbottles.jpg"
+          class="gallery__picture"
+        />
+        <img
+          src="images/mobile/image-gallery-orange.jpg"
+          class="gallery__picture"
+        />
+        <img
+          src="images/mobile/image-gallery-sugar-cubes.jpg"
+          class="gallery__picture"
+        />
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer__container container">
+        <div class="footer__picture">
+          <img
+            src="images/logo-footer.svg"
+            alt="Logo de la empresa"
+            class="footer__logo"
+          />
+        </div>
+
+        <nav class="footer__nav">
+          <a href="#" class="footer__link">About</a>
+          <a href="#" class="footer__link">Services</a>
+          <a href="#" class="footer__link">Projects</a>
+        </nav>
+
+        <div class="footer__socials">
+          <a href="#" class="footer__red">
+            <img
+              src="images/icon-facebook.svg"
+              alt="Icono de Facebook"
+              class="footer__icon"
+            />
+          </a>
+          <a href="#" class="footer__red">
+            <img
+              src="images/icon-instagram.svg"
+              alt="Icono de Instagram"
+              class="footer__icon"
+            />
+          </a>
+          <a href="#" class="footer__red">
+            <img
+              src="images/icon-twitter.svg"
+              alt="Icono de Twitter"
+              class="footer__icon"
+            />
+          </a>
+          <a href="#" class="footer__red">
+            <img
+              src="images/icon-pinterest.svg"
+              alt="Icono de Pinteres"
+              class="footer__icon"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <a href="#" class="arrowup">
+      <img src="images/arrowup.svg" alt="" />
+    </a> -->
+
+    <script src="js/menu.js"></script>
+  </body>
+</html>
