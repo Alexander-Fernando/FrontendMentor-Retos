@@ -229,6 +229,7 @@ body {
   color: var(--grayish-blue);
 }
 
+/*  SECTION GALLERY */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -284,13 +285,14 @@ body {
   position: fixed;
   display: block;
   top: 640px;
-  left: 410px;
+  left: 20px;
   border-radius: 50%;
   padding: 1rem 1rem;
   background-color: var(--yellow);
 }
 
 /*  RESPONSIVE DESING */
+
 @media screen and (min-width: 768px) {
   .hero {
     background-image: url('../images/desktop/image-header.jpg');
@@ -299,8 +301,13 @@ body {
   .hero__navegacion {
     display: block;
   }
+
   .hero__button {
     display: none;
+  }
+
+  .menu {
+    display: none !important;
   }
 
   .hero__logo {
@@ -319,6 +326,7 @@ body {
   .hero__link {
     text-decoration: none;
     color: var(--white);
+    transition: all 0.5s ease;
   }
 
   .hero__link:hover {
@@ -337,10 +345,11 @@ body {
   /*  SECTION MAIN  */
   .main__item {
     display: flex;
+    flex-direction: row-reverse;
   }
 
   .main__item--reverse {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 
   .main__picture {
@@ -400,17 +409,43 @@ body {
     letter-spacing: 0.3rem;
   }
 
+  /* GALLERY SECTINO  */
+  .gallery__picture {
+    width: 25%;
+  }
   /*  FOOTER SECTION  */
   .footer__container {
-    width: 50%;
+    width: 30%;
     justify-content: center;
   }
 
   .footer__picture {
-    width: 50%;
+    width: 30%;
   }
 
   .footer__nav {
     justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__main {
+    padding-top: 0;
+  }
+
+  /*  SECTION MAIN  */
+  .main__texts {
+    padding: 0 3rem;
+  }
+
+  /*  SECTION CARDS */
+  .card__texts {
+    padding: 6rem 0;
+    width: 45%;
+  }
+
+  /*  SECTION TESTIMONIOS */
+  .testimonios__client {
+    width: 25%;
   }
 }
