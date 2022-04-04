@@ -75,13 +75,13 @@ body {
 /*  RESPONSIVE DESIGN   */
 @media screen and (min-width: 992px) {
   .card {
-    width: 70%;
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .card {
-    width: 30%;
+    width: 40%;
     padding: 2rem 0;
   }
   .card__cta {
