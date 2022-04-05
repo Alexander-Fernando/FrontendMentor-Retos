@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__container container">
+        <h1 class="hero__title">IP Address Tracker</h1>
+        <form class="hero__form">
+          <input
+            type="search"
+            class="hero__input"
+            placeholder="Search for any IP or domain IP..."
+          />
+          <a class="hero__cta">
+            <img
+              src="images/icon-arrow.svg"
+              alt="Icono de búsqueda"
+              class="hero__icon"
+            />
+          </a>
+        </form>
+        <div class="hero__data">
+          <p class="hero__subtitle">IP ADDRESS</p>
+          <h3 class="hero__value ip">192.212.174.101</h3>
+          <p class="hero__subtitle location">Location</p>
+          <h3 class="hero__value location">Brooklyn, NY 10001</h3>
+          <p class="hero__subtitle">TIMEZONE</p>
+          <h3 class="hero__value timezone">UTC -05:</h3>
+          <p class="hero__subtitle">ISP</p>
+          <h3 class="hero__value isp">SpaceX Starlink</h3>
+        </div>
+      </div>
+    </header>
+
+    <div class="map" id="map"></div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

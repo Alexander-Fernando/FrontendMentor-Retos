@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --font: 'Rubik', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  height: 320px;
+  background-image: url('../images/pattern-bg.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__title {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.hero__form {
+  margin-top: 2rem;
+  display: flex;
+}
+.hero__input {
+  width: 100%;
+  padding: 1.3rem;
+  border-radius: 15px 0 0 15px;
+  padding-left: 1.5rem;
+  display: block;
+  font-size: 18px;
+  font-family: var(--font);
+  color: var(--very-dark-gray);
+  border: none;
+}
+.hero__subtitle {
+  font-size: 12px;
+  color: var(--dark-gray);
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.hero__value {
+  color: var(--very-dark-gray);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* .hero__form::after{
+    content:'';
+    background-image: url('../images/icon-arrow.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 10%;
+    display: block;
+    background-color; black;
+} */
+
+.hero__data {
+  background-color: #fff;
+  border-radius: 20px;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: -30px;
+}
+.hero__cta {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  border-radius: 0 15px 15px 0;
+}
+
+.hero__icon {
+  width: 15px;
+  height: 15px;
+}
+
+/*  MAP SECTION */
+#map {
+  z-index: -1;
+  height: 500px;
+}
