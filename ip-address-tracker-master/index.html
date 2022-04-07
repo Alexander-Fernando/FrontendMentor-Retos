@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,11 +32,11 @@
         <h1 class="hero__title">IP Address Tracker</h1>
         <form class="hero__form">
           <input
-            type="search"
+            type="text"
             class="hero__input"
             placeholder="Search for any IP or domain IP..."
           />
-          <a class="hero__cta">
+          <a class="hero__cta" href="#">
             <img
               src="images/icon-arrow.svg"
               alt="Icono de búsqueda"
@@ -47,7 +47,7 @@
         <div class="hero__data">
           <p class="hero__subtitle">IP ADDRESS</p>
           <h3 class="hero__value ip">192.212.174.101</h3>
-          <p class="hero__subtitle location">Location</p>
+          <p class="hero__subtitle">Location</p>
           <h3 class="hero__value location">Brooklyn, NY 10001</h3>
           <p class="hero__subtitle">TIMEZONE</p>
           <h3 class="hero__value timezone">UTC -05:</h3>
@@ -57,7 +57,7 @@
       </div>
     </header>
 
-    <div class="map" id="map"></div>
+    <div class="map" id="map" data-tap-disabled="true"></div>
     <script src="js/index.js"></script>
   </body>
 </html>
