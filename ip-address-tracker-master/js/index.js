@@ -1,17 +1,10 @@
-/*  DOOM ELEMENTS */
-const ip = document.querySelector('.ip');
-const locationhTML = document.querySelector('.location');
-const timezone = document.querySelector('.timezone');
-const isp = document.querySelector('.isp');
-const inputIp = document.querySelector('.hero__input');
-const buttonSearch = document.querySelector('.hero__cta');
+/*  IMPORTAR DOM ELEMENTS */
+import * as UI from './DoomElements.js';
+/*  IMPORTAR CREDENCIALES */
+import { cors, apikey } from './credentials.js';
 
-/*  CONSTANTES */
-const cors = 'https://cors-anywhere.herokuapp.com/';
-const apiKey = 'at_xQuAJJWbc7mMWTlrW5Fl6p16e0qfa';
-
-/* MaoLocation default */
-const map = L.map('map', {zoomControl: false}).setView([51.505, -0.09], 8);
+/* MapLocation default */
+const map = L.map('map', { zoomControl: false }).setView([51.505, -0.09], 8);
 
 /* Display map */
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -21,11 +14,27 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 16,
 }).addTo(map);
 
+// add  buttons controls of zoom
 L.control.zoom({ position: 'bottomleft' }).addTo(map);
+
+// add marker icon
+const LeafIcon = L.Icon.extend({
+  iconSize: [38, 95],
+  shadowSize: [50, 64],
+  iconAnchor: [22, 94],
+  shadowAnchor: [4, 62],
+  popupAnchor: [-3, -76],
+});
+const iconMarker = new LeafIcon({
+  iconUrl: '../images/icon-location.svg',
+});
+console.log(iconMarker);
+L.marker([51.505, -0.09], { icon: iconMarker }).addTo(map);
+
 /*  setLocation function: map */
 const setLocation = ([lat, lng]) => {
   map.setView([lat, lng], 15);
-  L.marker([lat, lng]).addTo(map);
+  L.marker([lat, lng], { icon: iconMarker }).addTo(map);
 };
 
 const getIpDefault = async () => {
@@ -42,7 +51,7 @@ const DefaultValues = () => {
 /*  getDataIP function */
 const getDataIp = (ipValue) => {
   const url = `https://geo.ipify.org/api/`;
-  const setIp = `${cors}${url}${'v1'}?apiKey=${apiKey}&ipAddress=${ipValue}`;
+  const setIp = `${cors}${url}${'v1'}?apiKey=${apikey}&ipAddress=${ipValue}`;
 
   fetch(setIp, { headers: { 'Access-Control-Allow-Origin': '*' } })
     .then((response) => response.json())
@@ -52,29 +61,27 @@ const getDataIp = (ipValue) => {
         isp: ispvalue,
         location: { country, region, city, timezone: timezonevalue, lat, lng },
       }) => {
-        ip.textContent = ipvalue;
-        locationhTML.textContent = `${country}, ${region}, ${city}`;
-        timezone.textContent = `${timezonevalue}`;
-        isp.textContent = ispvalue;
+        UI.ip.textContent = ipvalue;
+        UI.locationhTML.textContent = `${country}, ${region}, ${city}`;
+        UI.timezone.textContent = `${timezonevalue}`;
+        UI.isp.textContent = ispvalue;
         setLocation([lat, lng]);
       }
     )
-    .catch((err) =>
-      console.log('Ocurrió un error. Digite correctamente su ip: ', err)
-    );
+    .catch((err) => {
+      Swal.fire('Error!', 'Ingrese una dirección Ip válida', 'error');
+    });
 };
 
 /*  EVENT LISTENERS */
 // document.addEventListener('DOMContentLoaded', DefaultValues);
 
-buttonSearch.addEventListener('click', (e) => {
+UI.buttonSearch.addEventListener('click', (e) => {
   e.preventDefault();
-  const ipSearch = inputIp.value;
-  console.log('Dando click: ', ipSearch);
-  if (ipSearch != '' && ipSearch != null) {
+  const ipSearch = UI.inputIp.value;
+  if (ipSearch != '') {
     getDataIp(ipSearch);
-    ipSearch[0].value = '';
     return;
   }
-  console.log('Ingrese una IP.');
+  Swal.fire('Error!', 'Ingrese una dirección IP', 'error');
 });

@@ -17,6 +17,9 @@
       integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
       crossorigin=""
     />
+
+    <!-- SweetAlert CDN -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script
       src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
@@ -34,7 +37,7 @@
           <input
             type="text"
             class="hero__input"
-            placeholder="Search for any IP or domain IP..."
+            placeholder="Search for any IP address or domain"
           />
           <a class="hero__cta" href="#">
             <img
@@ -45,19 +48,27 @@
           </a>
         </form>
         <div class="hero__data">
-          <p class="hero__subtitle">IP ADDRESS</p>
-          <h3 class="hero__value ip">192.212.174.101</h3>
-          <p class="hero__subtitle">Location</p>
-          <h3 class="hero__value location">Brooklyn, NY 10001</h3>
-          <p class="hero__subtitle">TIMEZONE</p>
-          <h3 class="hero__value timezone">UTC -05:</h3>
-          <p class="hero__subtitle">ISP</p>
-          <h3 class="hero__value isp">SpaceX Starlink</h3>
+          <div class="hero__item">
+            <p class="hero__subtitle">IP ADDRESS</p>
+            <h3 class="hero__value ip">192.212.174.101</h3>
+          </div>
+          <div class="hero__item">
+            <p class="hero__subtitle">LOCATION</p>
+            <h3 class="hero__value location">Brooklyn, NY 10001</h3>
+          </div>
+          <div class="hero__item">
+            <p class="hero__subtitle">TIMEZONE</p>
+            <h3 class="hero__value timezone">UTC -05:00</h3>
+          </div>
+          <div class="hero__item">
+            <p class="hero__subtitle">ISP</p>
+            <h3 class="hero__value isp">SpaceX Starlink</h3>
+          </div>
         </div>
       </div>
     </header>
 
     <div class="map" id="map" data-tap-disabled="true"></div>
-    <script src="js/index.js"></script>
+    <script src="js/index.js" type="module"></script>
   </body>
 </html>
