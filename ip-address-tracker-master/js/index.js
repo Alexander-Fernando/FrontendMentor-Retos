@@ -1,7 +1,7 @@
 /*  IMPORTAR DOM ELEMENTS */
 import * as UI from './DoomElements.js';
 /*  IMPORTAR CREDENCIALES */
-import { cors, apikey } from './credentials.js';
+import { cors, apikey, headers } from './credentials.js';
 
 /* MapLocation default */
 const map = L.map('map', { zoomControl: false }).setView([51.505, -0.09], 8);
@@ -28,7 +28,6 @@ const LeafIcon = L.Icon.extend({
 const iconMarker = new LeafIcon({
   iconUrl: '../images/icon-location.svg',
 });
-console.log(iconMarker);
 L.marker([51.505, -0.09], { icon: iconMarker }).addTo(map);
 
 /*  setLocation function: map */
@@ -51,9 +50,9 @@ const DefaultValues = () => {
 /*  getDataIP function */
 const getDataIp = (ipValue) => {
   const url = `https://geo.ipify.org/api/`;
-  const setIp = `${cors}${url}${'v1'}?apiKey=${apikey}&ipAddress=${ipValue}`;
-
-  fetch(setIp, { headers: { 'Access-Control-Allow-Origin': '*' } })
+  const setIp = `${url}${'v1'}?apiKey=${apikey}&ipAddress=${ipValue}`;
+  console.log(setIp);
+  fetch(setIp, headers)
     .then((response) => response.json())
     .then(
       ({
@@ -74,7 +73,7 @@ const getDataIp = (ipValue) => {
 };
 
 /*  EVENT LISTENERS */
-// document.addEventListener('DOMContentLoaded', DefaultValues);
+document.addEventListener('DOMContentLoaded', DefaultValues);
 
 UI.buttonSearch.addEventListener('click', (e) => {
   e.preventDefault();
