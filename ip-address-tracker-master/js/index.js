@@ -51,7 +51,6 @@ const DefaultValues = () => {
 const getDataIp = (ipValue) => {
   const url = `https://geo.ipify.org/api/`;
   const setIp = `${url}${'v1'}?apiKey=${apikey}&ipAddress=${ipValue}`;
-  console.log(setIp);
   fetch(setIp, headers)
     .then((response) => response.json())
     .then(
