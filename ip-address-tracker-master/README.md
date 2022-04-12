@@ -20,6 +20,9 @@
 <!-- ABOUT THE PROJECT -->
 ## Acerca del proyecto
 
+<div align="center">
+    <img src="https://i.postimg.cc/bNZ3fd14/image.png" width="400px"</img> 
+</div>
 
 <br/>
        El proyecto consiste en una página web que al entrar detecta tu dirección IP y muestra los datos relacionadas a esta. También, el usuario puede buscar cualquier dirección IP y de igual manera mostrará información relacionada a esta.
